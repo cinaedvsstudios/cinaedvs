@@ -1,0 +1,580 @@
+:root {
+  --black: #080706;
+  --ink: #161310;
+  --charcoal: #262321;
+  --soft-black: rgba(8, 7, 6, .78);
+  --white: #faf8f2;
+  --marble: #eee8dc;
+  --stone: #d2c3a7;
+  --gold: #c59a45;
+  --bright-gold: #e2c272;
+  --bronze: #a76534;
+  --dark-bronze: #56311f;
+  --purple: #8b2fb2;
+  --wine: #3a0d26;
+  --patina: #54a894;
+  --blue: #1f75c9;
+  --red: #9d2d2d;
+  --shadow: 0 28px 80px rgba(0, 0, 0, .38);
+  --radius-xl: 34px;
+  --radius-lg: 24px;
+  --max: 1180px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: "Avenir Next", Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.72), rgba(243,238,228,.78)),
+    url("../img/cinaedvs-marble-bg.jpg") center top / cover fixed;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(226, 194, 114, .28), transparent 25%),
+    radial-gradient(circle at 88% 8%, rgba(255, 255, 255, .62), transparent 18%),
+    linear-gradient(90deg, rgba(0,0,0,.09), transparent 20%, transparent 80%, rgba(0,0,0,.11));
+  z-index: -1;
+}
+
+a { color: inherit; }
+
+img { max-width: 100%; display: block; }
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  padding: .75rem 1rem;
+  background: var(--black);
+  color: var(--white);
+  z-index: 100;
+}
+
+.skip-link:focus { top: 1rem; }
+
+.shell {
+  width: min(var(--max), calc(100% - 34px));
+  margin-inline: auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 14px clamp(18px, 4vw, 54px);
+  color: var(--white);
+  background: linear-gradient(90deg, rgba(6,5,4,.94), rgba(28,21,16,.9));
+  border-bottom: 1px solid rgba(226, 194, 114, .35);
+  box-shadow: 0 12px 32px rgba(0,0,0,.28);
+  backdrop-filter: blur(12px);
+}
+
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  letter-spacing: .24em;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: .92rem;
+}
+
+.brand-orb {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 25%, #f4c979, #9d6338 42%, #2c1710 74%);
+  box-shadow: 0 0 0 1px rgba(226,194,114,.48), 0 0 22px rgba(197,154,69,.34);
+}
+
+.top-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 2vw, 24px);
+  font-size: .78rem;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+}
+
+.top-nav a {
+  color: rgba(250,248,242,.82);
+  text-decoration: none;
+  padding: 10px 0;
+  border-bottom: 1px solid transparent;
+}
+
+.top-nav a:hover,
+.top-nav a:focus-visible {
+  color: var(--bright-gold);
+  border-color: var(--bright-gold);
+}
+
+.hero {
+  padding: clamp(36px, 6vw, 92px) 0 clamp(28px, 5vw, 76px);
+}
+
+.hero-panel {
+  position: relative;
+  overflow: hidden;
+  min-height: 560px;
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(330px, 1.1fr);
+  align-items: center;
+  gap: clamp(28px, 5vw, 64px);
+  padding: clamp(28px, 5vw, 70px);
+  border: 1px solid rgba(111, 83, 43, .25);
+  border-radius: var(--radius-xl);
+  background:
+    linear-gradient(105deg, rgba(255,255,255,.94), rgba(245,239,229,.78) 46%, rgba(19,16,14,.1)),
+    url("../img/cinaedvs-marble-bg.jpg") center / cover;
+  box-shadow: var(--shadow);
+}
+
+.hero-panel::before,
+.hero-panel::after {
+  content: "";
+  position: absolute;
+  inset: 22px;
+  border: 1px solid rgba(197,154,69,.38);
+  border-radius: calc(var(--radius-xl) - 14px);
+  pointer-events: none;
+}
+
+.hero-panel::after {
+  inset: auto -80px -115px auto;
+  width: 420px;
+  height: 420px;
+  border: 1px solid rgba(166, 101, 52, .24);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(226,194,114,.23), transparent 62%);
+}
+
+.hero-copy,
+.crest-stage { position: relative; z-index: 1; }
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--bronze);
+  font-size: .76rem;
+  font-weight: 800;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  line-height: 1.02;
+}
+
+h1 {
+  max-width: 660px;
+  font-size: clamp(3rem, 7vw, 6.6rem);
+  letter-spacing: -.055em;
+}
+
+.hero-text {
+  max-width: 600px;
+  margin: 24px 0 0;
+  color: rgba(22,19,16,.78);
+  font-size: clamp(1rem, 1.7vw, 1.18rem);
+  line-height: 1.78;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.primary-action,
+.secondary-action,
+.portal-button,
+.tool-card a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 18px;
+  color: var(--white);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-size: .78rem;
+  font-weight: 800;
+  border-radius: 999px;
+}
+
+.primary-action {
+  background: linear-gradient(135deg, #1b1511, #6c3d26 55%, #b8793d);
+  box-shadow: 0 12px 34px rgba(86,49,31,.25);
+}
+
+.secondary-action {
+  color: var(--ink);
+  background: rgba(255,255,255,.52);
+  border: 1px solid rgba(86,49,31,.22);
+}
+
+.crest-stage {
+  overflow: hidden;
+  border-radius: 28px;
+  padding: 10px;
+  background: rgba(255,255,255,.35);
+  border: 1px solid rgba(197,154,69,.32);
+  box-shadow: 0 18px 70px rgba(47,35,22,.23);
+}
+
+.crest-stage img {
+  width: 100%;
+  min-height: 430px;
+  object-fit: cover;
+  border-radius: 22px;
+}
+
+.section-heading {
+  width: min(760px, 100%);
+  margin: 0 auto 28px;
+  text-align: center;
+}
+
+.section-heading h2 {
+  font-size: clamp(2rem, 4.4vw, 4rem);
+  letter-spacing: -.035em;
+}
+
+.section-heading p:not(.eyebrow) {
+  margin: 16px auto 0;
+  color: rgba(22,19,16,.74);
+  line-height: 1.7;
+}
+
+.compact { margin-bottom: 22px; }
+
+.focus,
+.software-map,
+.archive,
+.about-band { padding: clamp(40px, 6vw, 88px) 0; }
+
+.portal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(18px, 3vw, 34px);
+}
+
+.portal-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 660px;
+  display: grid;
+  grid-template-rows: minmax(300px, .95fr) auto;
+  border-radius: var(--radius-xl);
+  color: var(--white);
+  background: var(--black);
+  box-shadow: var(--shadow);
+}
+
+.portal-card::before {
+  content: "";
+  position: absolute;
+  inset: 14px;
+  border: 1px solid rgba(226,194,114,.36);
+  border-radius: calc(var(--radius-xl) - 12px);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.portal-art {
+  position: relative;
+  min-height: 320px;
+  display: grid;
+  place-items: center;
+  isolation: isolate;
+}
+
+.portal-forever .portal-art {
+  background:
+    radial-gradient(circle at 50% 46%, rgba(139,47,178,.46), transparent 38%),
+    linear-gradient(180deg, rgba(0,0,0,.12), rgba(0,0,0,.78)),
+    url("../img/environments/forever-bound-pattern.jpg") center / cover;
+}
+
+.portal-symbol {
+  width: min(76%, 430px);
+  filter: drop-shadow(0 24px 36px rgba(0,0,0,.58));
+}
+
+.portal-software .portal-art {
+  background:
+    linear-gradient(160deg, rgba(250,248,242,.95), rgba(202,188,160,.8)),
+    url("../img/cinaedvs-marble-bg.jpg") center / cover;
+}
+
+.software-collage {
+  align-content: center;
+  gap: 18px;
+}
+
+.software-collage .aqueduct {
+  width: min(78%, 450px);
+  margin-inline: auto;
+  filter: drop-shadow(0 16px 24px rgba(0,0,0,.24));
+}
+
+.software-collage .code-repo {
+  width: min(82%, 430px);
+  margin-inline: auto;
+  filter: drop-shadow(0 12px 18px rgba(0,0,0,.28));
+}
+
+.portal-content {
+  position: relative;
+  z-index: 1;
+  padding: clamp(24px, 4vw, 42px);
+  background: linear-gradient(180deg, rgba(8,7,6,.86), rgba(8,7,6,.96));
+}
+
+.portal-kicker {
+  margin: 0 0 10px;
+  color: var(--bright-gold);
+  font-size: .72rem;
+  font-weight: 900;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+.portal-content h3 {
+  font-size: clamp(2rem, 4vw, 3.3rem);
+}
+
+.portal-content p:not(.portal-kicker) {
+  margin: 16px 0 24px;
+  color: rgba(250,248,242,.78);
+  line-height: 1.75;
+}
+
+.leather-button {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.05), rgba(0,0,0,.14)),
+    url("../img/environments/forever-bound-leather.jpg") center / cover;
+  border: 1px solid rgba(226,194,114,.28);
+}
+
+.stone-button {
+  color: #1b1511;
+  background: linear-gradient(135deg, #d9c092, #9e7a42);
+  border: 1px solid rgba(255,255,255,.35);
+}
+
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.tool-card {
+  overflow: hidden;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(86,49,31,.18);
+  background: rgba(255,255,255,.62);
+  box-shadow: 0 16px 52px rgba(0,0,0,.18);
+}
+
+.tool-card h3 {
+  margin: 20px 6px 0;
+  font-size: 2.1rem;
+}
+
+.tool-card p {
+  margin: 12px 6px 22px;
+  color: rgba(22,19,16,.72);
+  line-height: 1.65;
+}
+
+.tool-card a {
+  margin: auto 6px 6px;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--ink), var(--dark-bronze));
+}
+
+.tool-image {
+  min-height: 185px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 18px;
+  background: var(--black);
+  border: 1px solid rgba(197,154,69,.28);
+}
+
+.strip-image img,
+.title-image img { width: 92%; }
+
+.object-image img {
+  width: min(78%, 310px);
+  filter: drop-shadow(0 16px 22px rgba(0,0,0,.22));
+}
+
+.artifex-card .tool-image {
+  background:
+    radial-gradient(circle at 50% 40%, rgba(139,47,178,.28), transparent 42%),
+    linear-gradient(180deg, #1a0b12, #070605);
+}
+
+.organon-card .tool-image {
+  background:
+    linear-gradient(180deg, rgba(226,194,114,.1), rgba(0,0,0,.12)),
+    url("../img/environments/organon-stone-button.png") center / cover;
+}
+
+.travel-card .tool-image {
+  background: linear-gradient(135deg, #07090e, #0b2034 48%, #21110f);
+}
+
+.archive-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.archive-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 265px;
+  border-radius: 22px;
+  color: var(--white);
+  text-decoration: none;
+  background: var(--black);
+  box-shadow: 0 14px 42px rgba(0,0,0,.2);
+}
+
+.archive-card img {
+  width: 100%;
+  height: 100%;
+  min-height: 265px;
+  object-fit: cover;
+  opacity: .78;
+  transform: scale(1.02);
+  transition: transform .25s ease, opacity .25s ease;
+}
+
+.archive-card span {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  padding: 12px 14px;
+  border-radius: 999px;
+  background: rgba(8,7,6,.74);
+  border: 1px solid rgba(226,194,114,.28);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  font-size: .75rem;
+  font-weight: 900;
+}
+
+.archive-card:hover img,
+.archive-card:focus-visible img {
+  transform: scale(1.08);
+  opacity: .95;
+}
+
+.about-card {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 28px;
+  align-items: center;
+  padding: clamp(24px, 4vw, 42px);
+  border-radius: var(--radius-xl);
+  color: var(--white);
+  background: linear-gradient(135deg, rgba(8,7,6,.94), rgba(47,31,21,.9));
+  border: 1px solid rgba(226,194,114,.32);
+  box-shadow: var(--shadow);
+}
+
+.about-card h2 { font-size: clamp(2rem, 4vw, 3.7rem); }
+
+.about-card p:not(.eyebrow) {
+  color: rgba(250,248,242,.78);
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.site-footer {
+  margin-top: 34px;
+  padding: 30px 18px 48px;
+  color: var(--white);
+  background: var(--black);
+  text-align: center;
+}
+
+.site-footer img {
+  width: min(100%, 980px);
+  height: 28px;
+  object-fit: cover;
+  margin: 0 auto 20px;
+  opacity: .82;
+}
+
+.site-footer p { margin: 8px 0; }
+
+.small-note {
+  color: rgba(250,248,242,.56);
+  font-size: .86rem;
+}
+
+@media (max-width: 950px) {
+  .hero-panel,
+  .portal-grid,
+  .tool-grid,
+  .archive-grid,
+  .about-card {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-panel { min-height: auto; }
+  .crest-stage img { min-height: 310px; }
+  .archive-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 700px) {
+  .site-header {
+    position: static;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .top-nav {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 2px;
+  }
+
+  .hero-panel { padding: 24px; border-radius: 24px; }
+  .hero-panel::before { inset: 12px; border-radius: 18px; }
+  .portal-card { min-height: 560px; }
+  .archive-grid { grid-template-columns: 1fr; }
+}
