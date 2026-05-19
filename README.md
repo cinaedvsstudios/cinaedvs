@@ -1,42 +1,22 @@
-# CINAEDVS static GitHub Pages files
+# CINAEDVS Studios — Olympus Gateway Homepage
 
-This folder contains a clean static HTML/CSS/JS version of the CINAEDVS Google Sites page.
+This package contains a replacement landing page built as `index.html`.
 
-It is built to use the existing image folders already in the repository:
-
-- `logo small.jpg`
-- `lion head.jpg`
-- `lion logo test.png`
-- `marble background.jpg`
-- `Music/note.jpg`
-- `Artwork/Dior Bust.jpg`
-- `Artwork/beach torso.jpg`
-- `Artwork/dance remix.jpg`
-- `Artwork/techo bust.png`
-- `Artwork/woman.jpg`
-- `Clothes/pic.jpg`
-- `3d/3d.jpg`
-
-Upload these files into the root of the repository, keeping the current image folders where they are:
+Upload these items into the root of your GitHub Pages repository:
 
 - `index.html`
-- `about.html`
+- `assets/`
+- `.nojekyll`
+
+The page uses local image paths only, so the images should load as long as the `assets` folder stays beside `index.html`.
+
+The archive cards link to:
+
 - `music.html`
 - `artwork.html`
 - `clothing.html`
 - `models.html`
-- `.nojekyll`
-- `assets/css/style.css`
-- `assets/js/main.js`
 
-Then enable GitHub Pages from Settings → Pages → Deploy from a branch → `main` → `/ (root)`.
+If those pages are not in the repository yet, either add them or change those links in `index.html`.
 
-
-## Added pages
-
-This version adds two extra navigation items and homepage cards:
-
-- Software (`software.html`)
-- Streaming Shows (`streaming.html`)
-
-Both currently use existing root images from the repo as placeholders. When you add dedicated folders, update the image paths in `index.html`, `software.html`, and `streaming.html`.
+Unused files requested to be retained are also included in the package.

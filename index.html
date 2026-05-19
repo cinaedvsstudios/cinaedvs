@@ -3,120 +3,176 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CINAEDVS Studios — Olympus Gateway</title>
-  <meta name="description" content="CINAEDVS Studios: streaming shows, software, music, visual art, clothing, and 3D work in a clean neo-classical creative hub." />
-  <link rel="stylesheet" href="assets/css/index1.css" />
+  <title>CINAEDVS Studios — A Fusion of Ancient Spirit and Modern Creativity</title>
+  <meta name="description" content="CINAEDVS Studios is a multimedia brand for streaming shows, software, dance and pop music, video, digital art, bespoke clothing, and queer creative worlds." />
+  <link rel="stylesheet" href="assets/css/index.css" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header" aria-label="Primary navigation">
-    <a class="brand-mark" href="index1.html" aria-label="CINAEDVS Studios home">
-      <span class="brand-orb" aria-hidden="true"></span>
-      <span class="brand-text">CINAEDVS</span>
+    <a class="brand-mark" href="./" aria-label="CINAEDVS Studios home">
+      <img src="assets/img/cinaedvs/cinaedvs-lion-round.png" alt="" aria-hidden="true" />
+      <span>CINAEDVS</span>
     </a>
-    <nav class="top-nav" aria-label="Main sections">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="top-nav">Menu</button>
+    <nav id="top-nav" class="top-nav" aria-label="Main sections">
       <a href="#forever-bound">Forever Bound</a>
       <a href="#software">Software</a>
-      <a href="#archive">Archive</a>
+      <a href="#music">Music</a>
+      <a href="#studio-work">Studio Work</a>
       <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <main id="main">
-    <section class="hero shell" aria-labelledby="hero-title">
-      <div class="hero-panel">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-backdrop" aria-hidden="true"></div>
+      <div class="hero-shell shell">
         <div class="hero-copy">
-          <p class="eyebrow">CINAEDVS STUDIOS</p>
-          <h1 id="hero-title">A marble gateway to the worlds behind the work.</h1>
-          <p class="hero-text">A clean neo-classical hub for streaming shows, creative software, visual worlds, music, clothing, and digital art. The parent space is polished Olympus: white marble, bronze, gold veins, black glass, and quiet museum drama.</p>
-          <div class="hero-actions" aria-label="Featured actions">
-            <a class="primary-action" href="#forever-bound">Enter the show world</a>
-            <a class="secondary-action" href="#software">Explore software</a>
+          <p class="eyebrow">CINAEDVS Studios</p>
+          <h1 id="hero-title">A Fusion of Ancient Spirit and Modern Creativity</h1>
+          <p class="hero-lede">CINAEDVS is a multimedia brand specializing in dance and pop music, video, digital art, and bespoke clothing. Drawing inspiration from ancient history and merging it with contemporary flair, CINAEDVS creates unique, engaging content for the queer community in Europe and worldwide.</p>
+          <p class="hero-note">Celebrate individuality and timeless artistry with CINAEDVS.</p>
+          <div class="hero-actions" aria-label="Featured links">
+            <a class="action primary" href="#forever-bound">Forever Bound</a>
+            <a class="action secondary" href="#software">Software</a>
+            <a class="action secondary" href="#about">About CINAEDVS</a>
           </div>
         </div>
-        <div class="crest-stage" aria-label="CINAEDVS marble lion crest artwork">
-          <img src="assets/img/cinaedvs-logo-marble.jpg" alt="CINAEDVS bronze lion crest on white marble" />
+
+        <div class="hero-stage" aria-label="CINAEDVS marble gateway artwork">
+          <img class="doorway" src="assets/img/cinaedvs/olympus-doorway.png" alt="White marble gateway with lion statues" />
+          <figure class="crest-frame">
+            <img src="assets/img/cinaedvs/cinaedvs-lion-marble.jpg" alt="CINAEDVS bronze lion crest on white marble" />
+          </figure>
         </div>
       </div>
     </section>
 
-    <section class="focus shell" aria-labelledby="focus-title">
-      <div class="section-heading">
-        <p class="eyebrow">CURRENT FOCUS</p>
-        <h2 id="focus-title">Two main portals sit at the front of the temple.</h2>
-        <p>Forever Bound and Software are treated as the active worlds. The older music, artwork, clothing, and 3D work remain visible as an archive below.</p>
+    <section class="intro-band shell" aria-labelledby="intro-title">
+      <div class="intro-card">
+        <div>
+          <p class="eyebrow">Landing Page</p>
+          <h2 id="intro-title">One polished entrance for the active projects.</h2>
+        </div>
+        <p>CINAEDVS Studios works best as a clean parent page: a short explanation of the brand, clear links to the current focus areas, and a calmer gallery for the wider creative work. The main attention is now on <strong>Forever Bound</strong> and <strong>Software</strong>, while music, artwork, clothing, and 3D remain part of the overall studio identity.</p>
+      </div>
+    </section>
+
+    <section class="gateways shell" aria-labelledby="gateways-title">
+      <div class="section-heading center">
+        <p class="eyebrow">Current Focus</p>
+        <h2 id="gateways-title">Streaming shows and web apps sit at the front.</h2>
+        <p>The homepage gives each project enough context before sending visitors onward to the actual site, app, profile, or social page.</p>
       </div>
 
       <div class="portal-grid">
-        <article id="forever-bound" class="portal-card portal-forever">
-          <div class="portal-art">
-            <img class="portal-symbol" src="assets/img/environments/forever-bound-lantern.png" alt="Forever Bound lantern symbol" />
+        <article id="forever-bound" class="portal-card forever-card">
+          <div class="portal-media forever-media">
+            <img class="portal-banner" src="assets/img/forever-bound/forever-bound-banner.jpg" alt="Forever Bound title artwork with coloured smoke" />
+            <img class="portal-symbol lantern" src="assets/img/forever-bound/lantern-logo.png" alt="Forever Bound lantern symbol" />
           </div>
-          <div class="portal-content">
-            <p class="portal-kicker">STREAMING SHOWS</p>
+          <div class="portal-copy">
+            <p class="portal-kicker">Streaming Shows</p>
             <h3>Forever Bound</h3>
-            <p>A darker story-world for streaming shows: wood, leather, iron, violet flame, celtic forest, witchcraft, romance, danger, and theatrical fantasy atmosphere.</p>
-            <a class="portal-button leather-button" href="#link-coming-soon">Link coming soon</a>
+            <p>An epic, time-traveling historical action/fantasy-romance musical spanning 5,000 years, where a cursed witch seeks her soulmate before darkness falls.</p>
+            <p>In a world filled with ancient magic, a love that spans centuries is bound by fate, torn by dark forces, and rekindled across lifetimes.</p>
+            <blockquote>What if your soulmate was reborn every few centuries—but never remembered you?</blockquote>
+            <div class="card-actions">
+              <a class="action leather" href="https://sites.google.com/view/foreverbound">Visit Forever Bound</a>
+              <a class="action dark-outline" href="https://www.instagram.com/forever.bound.series/">Instagram</a>
+            </div>
           </div>
         </article>
 
-        <article id="software" class="portal-card portal-software">
-          <div class="portal-art software-collage" aria-label="Software environment icons">
-            <img class="aqueduct" src="assets/img/environments/organon-aqueduct.png" alt="Organon aqueduct symbol" />
-            <img class="code-repo" src="assets/img/environments/artifex-code-repo.png" alt="Artifex code editor and repository button" />
+        <article id="software" class="portal-card software-card">
+          <div class="portal-media software-media">
+            <div class="software-plaque">
+              <span>Software</span>
+              <small>web apps · editors · planning systems</small>
+            </div>
+            <img class="aqueduct-symbol" src="assets/img/organon/organon-aqueduct-logo.png" alt="Organon aqueduct app logo" />
           </div>
-          <div class="portal-content">
-            <p class="portal-kicker">WEB APPS + CREATIVE TOOLS</p>
+          <div class="portal-copy">
+            <p class="portal-kicker">Web Apps + Creative Tools</p>
             <h3>Software</h3>
-            <p>A growing set of practical web apps, editors, generators, planning systems, and creative workspaces. Artifex leans medieval workshop; Organon leans Roman systems; travel tools lean dark map archive.</p>
-            <a class="portal-button stone-button" href="#software-map">View tool map</a>
+            <p>A growing set of practical web apps, editors, generators, planning systems, and creative workspaces built around different CINAEDVS project worlds.</p>
+            <p>Artifex uses the medieval workshop language of wood, leather, iron, and violet accents. Organon uses stone, patina, aqueduct blue, and red accents. The travel tools move into a darker map-and-archive version of the Roman systems style.</p>
+            <div class="card-actions">
+              <a class="action stone" href="https://cinaedvsstudios.github.io/Organon/">Open Organon</a>
+              <a class="action dark-outline" href="#software-map">View Software Map</a>
+            </div>
           </div>
         </article>
       </div>
     </section>
 
-    <section id="software-map" class="software-map shell" aria-labelledby="software-title">
-      <div class="section-heading compact">
-        <p class="eyebrow">SOFTWARE CONSTELLATION</p>
-        <h2 id="software-title">Different apps, same mythic operating system.</h2>
+    <section id="software-map" class="software-map shell" aria-labelledby="software-map-title">
+      <div class="section-heading">
+        <p class="eyebrow">Software Map</p>
+        <h2 id="software-map-title">Different tools, different materials.</h2>
+        <p>Each app can keep its own atmosphere while still feeling like it belongs under the same CINAEDVS studio umbrella.</p>
       </div>
 
       <div class="tool-grid">
-        <article class="tool-card artifex-card">
-          <div class="tool-image strip-image">
-            <img src="assets/img/environments/artifex-code-repo.png" alt="Copper Artifex code editor and repository button" />
+        <article class="tool-card artifex-tool">
+          <div class="tool-art artifex-art" aria-hidden="true">
+            <span>ARTIFEX</span>
+            <small>wood · leather · iron · violet</small>
           </div>
           <h3>Artifex</h3>
-          <p>A creative builder/workshop space for editors, repositories, UI experiments, component libraries, and production tools.</p>
-          <a href="#link-coming-soon">Open Artifex</a>
+          <p>A creative workshop for editors, repositories, UI experiments, component planning, and production tools.</p>
+          <a href="#link-coming-soon">Link coming soon</a>
         </article>
 
-        <article class="tool-card organon-card">
-          <div class="tool-image title-image">
-            <img src="assets/img/environments/organon-title.png" alt="Organon stone title plaque" />
+        <article class="tool-card organon-tool">
+          <div class="tool-art organon-art">
+            <img class="organon-logo" src="assets/img/organon/organon-aqueduct-logo.png" alt="Organon aqueduct logo" />
+            <img class="organon-title" src="assets/img/organon/organon-title.png" alt="Organon title plaque" />
           </div>
           <h3>Organon</h3>
-          <p>A Roman systems interface: stone, iron, patina, aqueduct blue, red accents, structured planning, logic, and ordered information.</p>
-          <a href="#link-coming-soon">Open Organon</a>
+          <p>A Roman systems interface for structure, logic, ordered information, tools, and workflows.</p>
+          <a href="https://cinaedvsstudios.github.io/Organon/">Open Organon</a>
         </article>
 
-        <article class="tool-card travel-card">
-          <div class="tool-image object-image">
-            <img src="assets/img/environments/organon-aqueduct.png" alt="Aqueduct icon for travel app" />
+        <article class="tool-card travel-tool">
+          <div class="tool-art travel-art" aria-hidden="true">
+            <span>TRAVEL</span>
+            <small>nightlife · map archive · discovery</small>
           </div>
-          <h3>Travel App</h3>
-          <p>A darker map/archive version of the Roman system mood: nightlife, location research, practical trip planning, and structured discovery.</p>
-          <a href="#link-coming-soon">Open Travel Tools</a>
+          <h3>Travel Tools</h3>
+          <p>A darker Roman archive style for venue research, trip planning, location notes, and practical discovery.</p>
+          <a href="#link-coming-soon">Link coming soon</a>
         </article>
       </div>
     </section>
 
-    <section id="archive" class="archive shell" aria-labelledby="archive-title">
-      <div class="section-heading compact">
-        <p class="eyebrow">CREATIVE ARCHIVE</p>
-        <h2 id="archive-title">Older work stays in the gallery.</h2>
-        <p>These sections are still part of the CINAEDVS identity, but they sit lower on the landing page so the current focus stays clear.</p>
+    <section id="music" class="music-feature shell" aria-labelledby="music-title">
+      <div class="music-panel">
+        <div class="music-image">
+          <img src="assets/img/archive/music-note.jpg" alt="Music artwork preview" />
+        </div>
+        <div class="music-copy">
+          <p class="eyebrow">Music</p>
+          <h2 id="music-title">Christina Dior</h2>
+          <p>Check out the songs by artist Christina Dior that are produced by CINAEDVS Studios.</p>
+          <div class="card-actions left">
+            <a class="action stone" href="https://sites.google.com/view/christina-dior/news">News</a>
+            <a class="action dark-outline" href="https://www.instagram.com/misschristinadior">Instagram</a>
+            <a class="action dark-outline" href="https://linkpop.com/misschristinadior/index.html">Links</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="studio-work" class="studio-work shell" aria-labelledby="studio-work-title">
+      <div class="gallery-backdrop" aria-hidden="true"></div>
+      <div class="section-heading center">
+        <p class="eyebrow">Studio Work</p>
+        <h2 id="studio-work-title">Music, artwork, clothing, and 3D design are still part of the world.</h2>
+        <p>These areas give CINAEDVS its wider shape: production, image-making, fashion, 3D objects, and digital display.</p>
       </div>
 
       <div class="archive-grid">
@@ -133,29 +189,44 @@
           <span>Clothing</span>
         </a>
         <a class="archive-card" href="models.html">
-          <img src="assets/img/archive/models-3d.jpg" alt="3D model preview" />
+          <img src="assets/img/archive/model-3d.jpg" alt="3D model preview" />
           <span>3D Models</span>
         </a>
       </div>
     </section>
 
-    <section id="about" class="about-band shell" aria-labelledby="about-title">
+    <section id="about" class="about shell" aria-labelledby="about-title">
       <div class="about-card">
-        <div>
-          <p class="eyebrow">PARENT WORLD</p>
-          <h2 id="about-title">CINAEDVS is the marble hall. The projects are the doors.</h2>
+        <div class="about-title-block">
+          <p class="eyebrow">About CINAEDVS</p>
+          <h2 id="about-title">A multimedia studio built from antiquity, queerness, and modern production.</h2>
         </div>
-        <p>CINAEDVS Studios works best as a calm landing page that does not need constant updating. It introduces the brand, explains the active projects, and sends visitors onward to the shows, apps, tools, and archives.</p>
+        <div class="about-text">
+          <p>CINAEDVS is a groundbreaking multimedia brand dedicated to music, video, and digital art production, with a distinctive line of bespoke clothing.</p>
+          <p>Focusing primarily on dance and pop tracks, CINAEDVS also excels in creating engaging video and digital art for social media and advertising. With a target audience rooted in the queer community of Europe and beyond, CINAEDVS aims to deliver content that resonates deeply with its vibrant and diverse followers.</p>
+          <p>Drawing inspiration from ancient history, CINAEDVS — pronounced KIN-AYE-DUS — merges historical aesthetics with contemporary flair. The brand’s name, a Latin word derived from “cinaedus,” evokes the image of a gender-deviant entertainer from antiquity, known for his effeminate style and hedonistic allure.</p>
+          <p>This term, which historically referenced an effeminate dancer, reflects the brand’s mission to challenge conventional norms and celebrate individuality.</p>
+          <p>By blending ancient chord progressions and historical motifs with modern production techniques, fabrics, digital systems, and visual worlds, CINAEDVS captures the essence of ancient European artistry and reinvents it for today’s audience.</p>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <img src="assets/img/environments/aqueduct-divider.png" alt="" aria-hidden="true" />
-    <p>© CINAEDVS Studios</p>
-    <p class="small-note">Replace the “link coming soon” anchors with your live app, Patreon, Forever Bound, or project URLs when ready.</p>
+  <footer id="contact" class="site-footer">
+    <div class="footer-inner shell">
+      <img class="footer-logo" src="assets/img/cinaedvs/cinaedvs-lion-round.png" alt="CINAEDVS bronze lion logo" />
+      <div>
+        <p class="footer-brand">CINAEDVS Studios</p>
+        <p class="footer-small">© CINAEDVS Studios. A fusion of ancient spirit and modern creativity.</p>
+      </div>
+      <nav class="footer-links" aria-label="Contact and social links">
+        <a href="mailto:cinaedvsstudios@gmail.com">Email</a>
+        <a href="https://www.instagram.com/cinaedvsstudios/">Instagram</a>
+        <a href="https://www.instagram.com/forever.bound.series/">Forever Bound</a>
+      </nav>
+    </div>
   </footer>
 
-  <script src="assets/js/index1.js"></script>
+  <script src="assets/js/index.js"></script>
 </body>
 </html>

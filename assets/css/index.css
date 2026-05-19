@@ -1,0 +1,933 @@
+:root {
+  --black: #070707;
+  --ink: #15130f;
+  --charcoal: #262529;
+  --gray: #535257;
+  --soft-gray: #b5b1b1;
+  --white: #fbfaf7;
+  --warm-white: #f2eee8;
+  --marble: #e9e4dc;
+  --gold: #ac8c63;
+  --light-gold: #dbb58b;
+  --old-gold: #ab834f;
+  --bronze-shadow: #4a3c31;
+  --purple: #63225f;
+  --violet: #9d48c5;
+  --patina: #77a896;
+  --blue: #3476a9;
+  --red: #8d3830;
+  --max: 1180px;
+  --radius-xl: 34px;
+  --radius-lg: 24px;
+  --shadow: 0 28px 80px rgba(0, 0, 0, .25);
+  --soft-shadow: 0 18px 48px rgba(30, 24, 18, .16);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.80), rgba(243,238,231,.88) 42%, rgba(255,255,255,.82)),
+    url("../img/cinaedvs/cinaedvs-white-marble-gold.jpg") center top / cover fixed;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 12% 6%, rgba(219,181,139,.26), transparent 20%),
+    radial-gradient(circle at 90% 10%, rgba(255,255,255,.82), transparent 26%),
+    radial-gradient(circle at 50% 90%, rgba(172,140,99,.16), transparent 30%),
+    linear-gradient(90deg, rgba(7,7,7,.08), transparent 18%, transparent 82%, rgba(7,7,7,.08));
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  opacity: .22;
+  background-image: url("../img/cinaedvs/marble-geometric-wall.png");
+  background-size: 760px auto;
+  background-position: center top;
+  mix-blend-mode: multiply;
+}
+
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+
+.shell {
+  width: min(var(--max), calc(100% - 34px));
+  margin-inline: auto;
+}
+
+.skip-link {
+  position: absolute;
+  top: -4rem;
+  left: 1rem;
+  z-index: 200;
+  padding: .7rem 1rem;
+  color: var(--white);
+  background: var(--black);
+}
+
+.skip-link:focus { top: 1rem; }
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 12px clamp(18px, 4vw, 52px);
+  color: var(--white);
+  background: linear-gradient(90deg, rgba(7,7,7,.97), rgba(38,35,31,.94));
+  border-bottom: 1px solid rgba(219,181,139,.34);
+  box-shadow: 0 12px 34px rgba(0,0,0,.26);
+  backdrop-filter: blur(14px);
+}
+
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--white);
+  letter-spacing: .22em;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: .92rem;
+  text-transform: uppercase;
+}
+
+.brand-mark img {
+  width: 38px;
+  height: 38px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid rgba(219,181,139,.5);
+  box-shadow: 0 0 18px rgba(172,140,99,.22);
+}
+
+.top-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 2vw, 22px);
+  font-size: .74rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.top-nav a {
+  color: rgba(251,250,247,.78);
+  text-decoration: none;
+  padding: 10px 0;
+  border-bottom: 1px solid transparent;
+}
+
+.top-nav a:hover,
+.top-nav a:focus-visible {
+  color: var(--light-gold);
+  border-color: var(--light-gold);
+}
+
+.nav-toggle {
+  display: none;
+  color: var(--white);
+  background: transparent;
+  border: 1px solid rgba(219,181,139,.42);
+  border-radius: 999px;
+  padding: 9px 14px;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-weight: 800;
+}
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  min-height: 720px;
+  overflow: hidden;
+  display: grid;
+  align-items: stretch;
+}
+
+.hero-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.92), rgba(255,255,255,.6) 40%, rgba(255,255,255,.24)),
+    url("../img/cinaedvs/misty-colonnade.png") center / cover no-repeat;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.70) 0%, rgba(255,255,255,.20) 38%, rgba(239,233,224,.78) 100%),
+    radial-gradient(circle at 48% 16%, rgba(255,255,255,.95), transparent 28%);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 220px;
+  z-index: -1;
+  background: linear-gradient(180deg, transparent, rgba(241,236,228,.92));
+}
+
+.hero-shell {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(380px, .88fr);
+  align-items: center;
+  gap: clamp(28px, 5vw, 80px);
+  padding: clamp(70px, 10vw, 138px) 0 clamp(56px, 8vw, 110px);
+}
+
+.hero-copy {
+  max-width: 720px;
+  padding: clamp(22px, 4vw, 36px);
+  background: linear-gradient(135deg, rgba(255,255,255,.70), rgba(255,255,255,.38));
+  border: 1px solid rgba(172,140,99,.24);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--soft-shadow);
+  backdrop-filter: blur(10px);
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--old-gold);
+  font-size: .75rem;
+  font-weight: 900;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  line-height: 1.05;
+}
+
+h1 {
+  max-width: 780px;
+  font-size: clamp(3.25rem, 8vw, 7.3rem);
+  letter-spacing: -.06em;
+}
+
+h2 {
+  font-size: clamp(2rem, 4.2vw, 4.2rem);
+  letter-spacing: -.045em;
+}
+
+h3 {
+  font-size: clamp(1.8rem, 3vw, 3.1rem);
+  letter-spacing: -.035em;
+}
+
+.hero-lede,
+.hero-note,
+.section-heading p,
+.intro-card p,
+.portal-copy p,
+.tool-card p,
+.music-copy p,
+.about-text p,
+.footer-small {
+  font-size: 1rem;
+  line-height: 1.72;
+}
+
+.hero-lede {
+  margin: 24px 0 0;
+  color: rgba(21,19,15,.78);
+  font-size: clamp(1.02rem, 1.5vw, 1.16rem);
+}
+
+.hero-note {
+  margin: 12px 0 0;
+  color: rgba(21,19,15,.72);
+  font-weight: 700;
+}
+
+.hero-actions,
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.card-actions { margin-top: 20px; }
+.card-actions.left { justify-content: flex-start; }
+
+.action,
+.tool-card a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 18px;
+  text-decoration: none;
+  border-radius: 999px;
+  font-size: .76rem;
+  font-weight: 900;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+.action:hover,
+.action:focus-visible,
+.tool-card a:hover,
+.tool-card a:focus-visible {
+  transform: translateY(-2px);
+}
+
+.action.primary {
+  color: var(--white);
+  background: linear-gradient(135deg, var(--black), var(--bronze-shadow) 48%, var(--old-gold));
+  box-shadow: 0 16px 34px rgba(74,60,49,.24);
+}
+
+.action.secondary,
+.action.dark-outline {
+  color: var(--ink);
+  background: rgba(255,255,255,.58);
+  border: 1px solid rgba(74,60,49,.2);
+}
+
+.action.dark-outline {
+  background: rgba(255,255,255,.16);
+  color: inherit;
+  border-color: rgba(219,181,139,.34);
+}
+
+.action.leather {
+  color: #f8ede7;
+  background:
+    linear-gradient(180deg, rgba(57,25,22,.44), rgba(18,9,8,.75)),
+    url("../img/forever-bound/leather-button.jpg") center / cover;
+  border: 1px solid rgba(219,181,139,.42);
+  box-shadow: 0 14px 32px rgba(20,7,14,.28);
+}
+
+.action.stone,
+.tool-card a {
+  color: var(--ink);
+  background: linear-gradient(135deg, rgba(255,255,255,.84), rgba(219,181,139,.33));
+  border: 1px solid rgba(172,140,99,.36);
+}
+
+.hero-stage {
+  position: relative;
+  min-height: 520px;
+  display: grid;
+  align-items: end;
+  justify-items: center;
+}
+
+.doorway {
+  position: absolute;
+  bottom: 0;
+  width: min(700px, 118%);
+  max-width: none;
+  opacity: .92;
+  filter: drop-shadow(0 26px 38px rgba(44,38,32,.25));
+}
+
+.crest-frame {
+  position: relative;
+  width: min(480px, 92%);
+  margin: 0 0 115px;
+  overflow: hidden;
+  border-radius: 28px;
+  border: 1px solid rgba(172,140,99,.34);
+  box-shadow: 0 32px 70px rgba(48,42,36,.22);
+  transform: translateY(-10px);
+}
+
+.crest-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border: 12px solid rgba(255,255,255,.46);
+  box-shadow: inset 0 0 0 1px rgba(172,140,99,.18);
+}
+
+.intro-band,
+.gateways,
+.software-map,
+.music-feature,
+.studio-work,
+.about {
+  padding: clamp(40px, 7vw, 86px) 0;
+}
+
+.intro-card {
+  display: grid;
+  grid-template-columns: minmax(230px, .7fr) minmax(0, 1.3fr);
+  gap: clamp(26px, 5vw, 66px);
+  align-items: center;
+  padding: clamp(26px, 5vw, 52px);
+  border: 1px solid rgba(172,140,99,.22);
+  border-radius: var(--radius-xl);
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.86), rgba(239,235,229,.70)),
+    url("../img/cinaedvs/marble-geometric-wall.png") center / cover;
+  box-shadow: var(--soft-shadow);
+}
+
+.intro-card p { margin: 0; color: rgba(21,19,15,.76); }
+
+.section-heading {
+  max-width: 760px;
+  margin-bottom: clamp(26px, 5vw, 48px);
+}
+
+.section-heading.center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.section-heading p {
+  margin: 16px 0 0;
+  color: rgba(21,19,15,.70);
+}
+
+.portal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(18px, 3vw, 30px);
+}
+
+.portal-card {
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(74,60,49,.20);
+  box-shadow: var(--shadow);
+  background: rgba(255,255,255,.82);
+}
+
+.portal-media {
+  position: relative;
+  min-height: 300px;
+  overflow: hidden;
+}
+
+.portal-banner {
+  width: 100%;
+  height: 100%;
+  min-height: 330px;
+  object-fit: cover;
+}
+
+.forever-media::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.05), rgba(20,4,17,.76)),
+    url("../img/forever-bound/violet-celtic-bar.jpg") center / cover;
+  background-blend-mode: multiply;
+  opacity: .9;
+}
+
+.forever-media .portal-banner {
+  position: absolute;
+  inset: 0;
+  opacity: .82;
+}
+
+.portal-symbol.lantern {
+  position: relative;
+  z-index: 2;
+  width: min(270px, 62%);
+  margin: 30px auto;
+  filter: drop-shadow(0 24px 40px rgba(0,0,0,.5));
+}
+
+.portal-copy {
+  padding: clamp(24px, 4vw, 40px);
+}
+
+.portal-kicker {
+  margin: 0 0 10px !important;
+  color: var(--old-gold) !important;
+  font-size: .72rem !important;
+  font-weight: 900;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+.portal-copy p {
+  margin: 17px 0 0;
+  color: rgba(21,19,15,.74);
+}
+
+.forever-card {
+  color: #f7ece4;
+  background:
+    linear-gradient(180deg, rgba(28,10,19,.96), rgba(14,7,9,.96)),
+    url("../img/forever-bound/violet-celtic-bar.jpg") center / cover;
+  border-color: rgba(219,181,139,.3);
+}
+
+.forever-card .portal-kicker,
+.forever-card .portal-copy p,
+.forever-card blockquote { color: rgba(248,237,231,.76) !important; }
+
+.forever-card h3 { color: #fff8ef; }
+
+blockquote {
+  margin: 22px 0 0;
+  padding: 18px 20px;
+  border-left: 3px solid var(--light-gold);
+  background: rgba(255,255,255,.07);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.software-card {
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.90), rgba(238,232,222,.78)),
+    url("../img/cinaedvs/marble-geometric-wall.png") center / cover;
+}
+
+.software-media {
+  display: grid;
+  place-items: center;
+  min-height: 330px;
+  padding: 28px;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.72), rgba(255,255,255,.16)),
+    url("../img/cinaedvs/arcade-gallery.png") center / cover no-repeat;
+}
+
+.software-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 18%, rgba(255,255,255,.84), transparent 34%), linear-gradient(180deg, transparent, rgba(255,255,255,.78));
+}
+
+.aqueduct-symbol {
+  position: relative;
+  z-index: 2;
+  width: min(310px, 74%);
+  filter: drop-shadow(0 22px 28px rgba(0,0,0,.24));
+}
+
+.software-plaque {
+  position: absolute;
+  left: 24px;
+  top: 24px;
+  z-index: 3;
+  padding: 13px 17px;
+  color: var(--ink);
+  border: 1px solid rgba(172,140,99,.42);
+  border-radius: 999px;
+  background: rgba(255,255,255,.72);
+  box-shadow: 0 14px 28px rgba(30,24,18,.12);
+  backdrop-filter: blur(8px);
+}
+
+.software-plaque span {
+  display: block;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.15rem;
+  letter-spacing: .02em;
+}
+
+.software-plaque small {
+  display: block;
+  margin-top: 2px;
+  color: var(--gray);
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.tool-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+  padding: 18px;
+  border-radius: 26px;
+  border: 1px solid rgba(74,60,49,.18);
+  background: rgba(255,255,255,.78);
+  box-shadow: var(--soft-shadow);
+}
+
+.tool-art {
+  min-height: 205px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid rgba(74,60,49,.16);
+  margin-bottom: 20px;
+}
+
+.tool-art span {
+  display: block;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: .08em;
+}
+
+.tool-art small {
+  display: block;
+  margin-top: 8px;
+  font-size: .72rem;
+  font-weight: 900;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.artifex-art {
+  color: #fff2ef;
+  background:
+    linear-gradient(135deg, rgba(20,8,10,.76), rgba(63,20,58,.42)),
+    url("../img/forever-bound/violet-celtic-bar.jpg") center / cover;
+}
+
+.organon-art {
+  gap: 8px;
+  padding: 18px;
+  background: linear-gradient(180deg, rgba(255,255,255,.82), rgba(233,225,215,.78));
+}
+
+.organon-logo {
+  width: min(250px, 90%);
+  max-height: 130px;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 18px rgba(0,0,0,.14));
+}
+
+.organon-title {
+  width: min(330px, 94%);
+  object-fit: contain;
+  filter: drop-shadow(0 10px 16px rgba(0,0,0,.14));
+}
+
+.travel-art {
+  color: #f2eee8;
+  background:
+    radial-gradient(circle at 35% 25%, rgba(52,118,169,.48), transparent 28%),
+    radial-gradient(circle at 72% 76%, rgba(141,56,48,.40), transparent 34%),
+    linear-gradient(135deg, #12151a, #2b2b31 52%, #1a1817);
+}
+
+.tool-card h3 {
+  font-size: 1.7rem;
+}
+
+.tool-card p {
+  min-height: 106px;
+  margin: 12px 0 18px;
+  color: rgba(21,19,15,.70);
+}
+
+.music-panel {
+  display: grid;
+  grid-template-columns: minmax(280px, .88fr) minmax(0, 1.12fr);
+  gap: clamp(24px, 5vw, 56px);
+  align-items: center;
+  padding: clamp(22px, 4vw, 44px);
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(172,140,99,.22);
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.88), rgba(246,241,234,.72)),
+    url("../img/cinaedvs/marble-geometric-wall.png") center / cover;
+  box-shadow: var(--soft-shadow);
+}
+
+.music-image {
+  overflow: hidden;
+  border-radius: 24px;
+  border: 1px solid rgba(74,60,49,.2);
+  box-shadow: 0 18px 40px rgba(30,24,18,.18);
+}
+
+.music-image img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.music-copy p {
+  color: rgba(21,19,15,.72);
+}
+
+.studio-work {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  margin-top: 28px;
+}
+
+.gallery-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  border-radius: var(--radius-xl);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.86), rgba(255,255,255,.62)),
+    url("../img/cinaedvs/arcade-gallery.png") center / cover no-repeat;
+  opacity: .86;
+}
+
+.studio-work::after {
+  content: "";
+  position: absolute;
+  inset: 16px;
+  z-index: -1;
+  border: 1px solid rgba(172,140,99,.28);
+  border-radius: calc(var(--radius-xl) - 10px);
+  pointer-events: none;
+}
+
+.archive-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.archive-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 320px;
+  display: flex;
+  align-items: flex-end;
+  text-decoration: none;
+  border-radius: 24px;
+  border: 1px solid rgba(74,60,49,.22);
+  background: #111;
+  box-shadow: 0 18px 40px rgba(30,24,18,.16);
+}
+
+.archive-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .45s ease;
+}
+
+.archive-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 36%, rgba(0,0,0,.78));
+}
+
+.archive-card span {
+  position: relative;
+  z-index: 1;
+  width: calc(100% - 28px);
+  margin: 14px;
+  padding: 13px 16px;
+  color: var(--white);
+  background: rgba(7,7,7,.55);
+  border: 1px solid rgba(219,181,139,.42);
+  border-radius: 999px;
+  font-weight: 900;
+  letter-spacing: .12em;
+  text-align: center;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+}
+
+.archive-card:hover img,
+.archive-card:focus-visible img { transform: scale(1.05); }
+
+.about-card {
+  display: grid;
+  grid-template-columns: minmax(260px, .72fr) minmax(0, 1.28fr);
+  gap: clamp(28px, 5vw, 64px);
+  padding: clamp(28px, 5vw, 58px);
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(74,60,49,.22);
+  background:
+    linear-gradient(120deg, rgba(255,255,255,.92), rgba(241,236,228,.82)),
+    url("../img/cinaedvs/cinaedvs-white-marble-gold.jpg") center / cover;
+  box-shadow: var(--soft-shadow);
+}
+
+.about-text p {
+  margin: 0 0 16px;
+  color: rgba(21,19,15,.74);
+}
+
+.about-text p:last-child { margin-bottom: 0; }
+
+.site-footer {
+  color: rgba(251,250,247,.82);
+  background: linear-gradient(90deg, #070707, #25221f);
+  border-top: 1px solid rgba(219,181,139,.28);
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 18px;
+  padding: 28px 0;
+}
+
+.footer-logo {
+  width: 58px;
+  height: 58px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid rgba(219,181,139,.45);
+}
+
+.footer-brand {
+  margin: 0;
+  color: var(--white);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.2rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.footer-small { margin: 4px 0 0; color: rgba(251,250,247,.62); }
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.footer-links a {
+  color: rgba(251,250,247,.78);
+  text-decoration: none;
+  font-size: .74rem;
+  font-weight: 900;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible { color: var(--light-gold); }
+
+@media (max-width: 980px) {
+  .nav-toggle { display: inline-flex; }
+
+  .top-nav {
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    top: calc(100% + 8px);
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 14px;
+    background: rgba(7,7,7,.96);
+    border: 1px solid rgba(219,181,139,.32);
+    border-radius: 18px;
+    box-shadow: 0 22px 42px rgba(0,0,0,.28);
+  }
+
+  .top-nav.is-open { display: flex; }
+  .top-nav a { padding: 12px; }
+
+  .hero-shell,
+  .portal-grid,
+  .tool-grid,
+  .music-panel,
+  .about-card,
+  .intro-card {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: auto;
+  }
+
+  .hero-stage {
+    order: -1;
+    min-height: 390px;
+  }
+
+  .crest-frame {
+    width: min(440px, 88%);
+    margin-bottom: 70px;
+  }
+
+  .archive-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .footer-links { justify-content: center; }
+}
+
+@media (max-width: 620px) {
+  .shell { width: min(100% - 24px, var(--max)); }
+  .site-header { padding: 10px 12px; }
+  .brand-mark span { display: none; }
+  .hero-copy { padding: 22px; }
+  h1 { font-size: clamp(2.65rem, 14vw, 4rem); }
+  h2 { font-size: clamp(2rem, 9vw, 3rem); }
+  .hero-stage { min-height: 315px; }
+  .doorway { width: 125%; }
+  .crest-frame { margin-bottom: 48px; }
+  .archive-grid { grid-template-columns: 1fr; }
+  .archive-card { min-height: 260px; }
+  .portal-media { min-height: 250px; }
+  .software-plaque {
+    position: relative;
+    left: auto;
+    top: auto;
+    margin-bottom: 18px;
+  }
+  .software-media { min-height: 280px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; }
+}
