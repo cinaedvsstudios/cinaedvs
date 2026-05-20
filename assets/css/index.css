@@ -1145,6 +1145,14 @@ body.entered .site-footer {
   font-size: clamp(2rem, 3.35vw, 4rem);
 }
 
+.focus-card .feature-media {
+  min-height: clamp(220px, 28vh, 290px);
+}
+
+.focus-card .forever-banner {
+  object-position: center center;
+}
+
 .app-media {
   height: 260px;
   min-height: 260px;
