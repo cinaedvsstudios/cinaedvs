@@ -17,7 +17,10 @@
   let touchStartY = 0;
   let hasTouchStart = false;
 
-  const clampIndex = (index) => Math.max(0, Math.min(slides.length - 1, index));
+  const wrapIndex = (index) => {
+    if (!slides.length) return 0;
+    return ((index % slides.length) + slides.length) % slides.length;
+  };
 
   const openSite = () => {
     if (body.classList.contains('entered') || body.classList.contains('is-opening')) return;
@@ -30,11 +33,11 @@
   };
 
   const update = (index) => {
-    current = clampIndex(index);
+    current = wrapIndex(index);
     document.documentElement.style.setProperty('--slide-index', String(current));
 
-    prevButton.disabled = current === 0;
-    nextButton.disabled = current === slides.length - 1;
+    prevButton.disabled = false;
+    nextButton.disabled = false;
 
     const title = slides[current]?.dataset.title || '';
     if (slideName) slideName.textContent = title;

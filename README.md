@@ -14,3 +14,6 @@ SEO files included:
 - Open Graph metadata
 - Twitter card metadata
 - Organization schema JSON-LD
+
+
+Update notes: carousel now wraps from last card back to first, desktop layout is compressed to fit one screen better, entry lion uses the transparent image without a circular frame, and Backroom preview uses a cover-fill background behind the narrow banner.
