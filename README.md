@@ -17,3 +17,6 @@ SEO files included:
 
 
 Update notes: carousel now wraps from last card back to first, desktop layout is compressed to fit one screen better, entry lion uses the transparent image without a circular frame, and Backroom preview uses a cover-fill background behind the narrow banner.
+
+
+Update note: revised header lion icon, current focus title, Forever Bound lantern sizing, web app blurbs, Organon title sizing, right arrow glow, and bottom pill visibility.
