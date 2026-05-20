@@ -108,7 +108,7 @@ a { color: inherit; }
   cursor: pointer;
   background: transparent;
   filter: drop-shadow(0 24px 42px rgba(55,43,32,.30));
-  animation: lionPulse 3.1s ease-in-out infinite;
+  animation: lionPulse 1s ease-in-out infinite;
 }
 
 .entry-lion::before,
@@ -958,13 +958,16 @@ body.entered .site-footer {
 
 @keyframes lionPulse {
   0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.065); }
+  18% { transform: scale(1.13); }
+  32% { transform: scale(.985); }
+  52% { transform: scale(1.075); }
+  72% { transform: scale(1); }
 }
 
 @keyframes lionBurst {
   0% { transform: scale(1); opacity: 1; filter: blur(0) drop-shadow(0 22px 38px rgba(55,43,32,.28)); }
-  42% { transform: scale(1.45); opacity: 1; filter: blur(0) drop-shadow(0 0 64px rgba(219,181,139,.82)); }
-  100% { transform: scale(5.2); opacity: 0; filter: blur(22px) drop-shadow(0 0 110px rgba(255,255,255,.98)); }
+  42% { transform: scale(1.72); opacity: 1; filter: blur(0) drop-shadow(0 0 64px rgba(219,181,139,.82)); }
+  100% { transform: scale(8.2); opacity: 0; filter: blur(24px) drop-shadow(0 0 120px rgba(255,255,255,.98)); }
 }
 
 @keyframes arrowPulse {
@@ -1114,4 +1117,147 @@ body.entered .site-footer {
   .button-row { margin-top: 12px; }
   .action { min-height: 38px; padding: 8px 12px; }
   .about-text p { font-size: .78rem; line-height: 1.36; margin-bottom: 7px; }
+}
+
+
+/* Requested carousel refinements */
+.entry-lion {
+  width: min(330px, 40vw);
+  transform-origin: center;
+  will-change: transform;
+}
+
+.entry-lion img {
+  object-fit: contain;
+}
+
+.landing-art .crest {
+  width: min(260px, 58%);
+  margin-bottom: 88px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  filter: drop-shadow(0 22px 36px rgba(48,42,36,.24));
+}
+
+.focus-card .section-title-block h2 {
+  font-size: clamp(2rem, 3.35vw, 4rem);
+}
+
+.app-media {
+  height: 260px;
+  min-height: 260px;
+}
+
+.artifex-media img {
+  max-height: 170px;
+}
+
+.organon-logo {
+  width: min(220px, 75%);
+  max-height: 125px;
+}
+
+.organon-title {
+  width: min(300px, 86%);
+  max-height: 92px;
+}
+
+.backroom-media img {
+  object-fit: contain;
+}
+
+.tile-card {
+  background:
+    linear-gradient(120deg, rgba(255,255,255,.92), rgba(255,255,255,.82) 52%, rgba(245,241,235,.86)),
+    url("../img/cinaedvs/cinaedvs-mosaic-tech.png") center / cover no-repeat;
+}
+
+.about-story-card {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(300px, .82fr);
+  align-items: center;
+  gap: clamp(22px, 4vw, 54px);
+  padding: clamp(28px, 4.2vw, 58px);
+}
+
+.about-story-copy {
+  position: relative;
+  z-index: 5;
+  max-width: 780px;
+}
+
+.about-story-copy h2 {
+  max-width: 720px;
+  font-size: clamp(2.35rem, 4.15vw, 4.85rem);
+}
+
+.about-story-copy p:not(.eyebrow) {
+  margin: 14px 0 0;
+  color: rgba(21,19,15,.74);
+  font-size: clamp(.9rem, 1.02vw, 1rem);
+  line-height: 1.55;
+}
+
+.about-story-art {
+  position: relative;
+  z-index: 4;
+  display: grid;
+  place-items: center;
+  min-height: 420px;
+}
+
+.about-story-art img {
+  max-height: min(510px, 62vh);
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 28px 46px rgba(55,43,32,.24));
+}
+
+.tree-art img {
+  width: min(520px, 96%);
+  max-height: 430px;
+}
+
+.about-origin-card .about-story-copy {
+  max-width: 860px;
+}
+
+@media (min-width: 1120px) and (max-height: 820px) {
+  .entry-lion { width: min(300px, 34vw); }
+  .landing-art .crest { width: min(220px, 52%); margin-bottom: 78px; }
+  .app-media { height: 230px; min-height: 230px; }
+  .about-story-card { padding: 34px 52px; }
+  .about-story-copy h2 { font-size: clamp(2.25rem, 3.65vw, 4.2rem); }
+  .about-story-copy p:not(.eyebrow) { font-size: .88rem; line-height: 1.48; }
+  .about-story-art { min-height: 340px; }
+  .about-story-art img { max-height: 430px; }
+  .tree-art img { max-height: 360px; }
+}
+
+@media (max-width: 1050px) {
+  .about-story-card {
+    grid-template-columns: 1fr;
+  }
+  .about-story-art {
+    order: -1;
+    min-height: 260px;
+  }
+  .about-story-art img {
+    max-height: 310px;
+  }
+}
+
+@media (max-width: 680px) {
+  .entry-lion { width: min(250px, 62vw); }
+  .landing-art .crest { width: min(210px, 62%); margin-bottom: 46px; }
+  .app-media { height: 200px; min-height: 200px; }
+  .about-story-card { padding: 24px; }
+  .about-story-copy h2 { font-size: clamp(2.15rem, 10vw, 3.35rem); }
+  .about-story-copy p:not(.eyebrow) { font-size: .94rem; line-height: 1.55; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .entry-lion { animation: lionPulse 1s ease-in-out infinite !important; }
 }
