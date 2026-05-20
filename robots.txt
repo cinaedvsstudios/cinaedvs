@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://cinaedvsstudios.github.io/cinaedvs/sitemap.xml
