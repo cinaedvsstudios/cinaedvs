@@ -1,4 +1,9 @@
 (() => {
+  const scaleStylesheet = document.createElement('link');
+  scaleStylesheet.rel = 'stylesheet';
+  scaleStylesheet.href = 'assets/css/desktop-scale.css';
+  document.head.appendChild(scaleStylesheet);
+
   const body = document.body;
   const enterButton = document.querySelector('.entry-lion');
   const track = document.querySelector('.carousel-track');
