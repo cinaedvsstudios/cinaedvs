@@ -1,0 +1,142 @@
+/* Desktop presentation scale: approximately 20% smaller without using browser zoom. */
+@media (min-width: 1051px) {
+  .site-header {
+    gap: 14px;
+    padding: 10px clamp(14px, 3.2vw, 42px);
+  }
+
+  .brand-mark {
+    gap: 10px;
+    font-size: .74rem;
+  }
+
+  .brand-mark img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .top-nav {
+    gap: clamp(8px, 1.6vw, 18px);
+    font-size: .58rem;
+  }
+
+  .top-nav a {
+    padding: 8px 0;
+  }
+
+  .slider-shell {
+    padding: 61px 0 59px;
+  }
+
+  .carousel-viewport {
+    width: min(1056px, calc(100vw - 96px));
+    height: min(536px, calc(100vh - 120px));
+  }
+
+  .slide {
+    padding: 5px;
+  }
+
+  h1 {
+    font-size: clamp(2.4rem, 4.16vw, 4.28rem);
+  }
+
+  h2 {
+    font-size: clamp(1.72rem, 3.08vw, 3.64rem);
+  }
+
+  h3 {
+    font-size: clamp(1.36rem, 2.4vw, 2.52rem);
+  }
+
+  p {
+    font-size: clamp(.72rem, .86vw, .82rem);
+  }
+
+  .eyebrow {
+    margin-bottom: 10px;
+    font-size: .59rem;
+  }
+
+  .section-title-block h2 {
+    font-size: clamp(1.6rem, 2.76vw, 3.2rem);
+  }
+
+  .landing-copy p:not(.eyebrow),
+  .feature-copy p {
+    font-size: clamp(.70rem, .78vw, .78rem);
+    line-height: 1.46;
+  }
+
+  .feature-copy {
+    padding: clamp(14px, 1.92vw, 21px);
+  }
+
+  .app-grid {
+    gap: 14px;
+  }
+
+  .app-card {
+    padding: 13px;
+  }
+
+  .app-card h3 {
+    margin-top: 11px;
+    font-size: 1.24rem;
+  }
+
+  .app-card p {
+    margin: 8px 0 14px;
+  }
+
+  .app-media {
+    height: 168px;
+    min-height: 168px;
+    border-radius: 14px;
+  }
+
+  .button-row {
+    gap: 8px;
+    margin-top: 14px;
+  }
+
+  .action {
+    min-height: 34px;
+    padding: 8px 12px;
+    font-size: .54rem;
+  }
+
+  .carousel-arrow {
+    width: 46px;
+    height: 46px;
+    font-size: 2rem;
+  }
+
+  .carousel-status {
+    bottom: 16px;
+  }
+
+  .slide-name,
+  .footer-links a {
+    font-size: .58rem;
+  }
+
+  .footer-inner {
+    width: min(944px, calc(100% - 28px));
+    gap: 14px;
+    padding: 18px 0;
+  }
+
+  .footer-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .footer-brand {
+    font-size: .84rem;
+  }
+
+  .footer-small {
+    font-size: .74rem;
+  }
+}
