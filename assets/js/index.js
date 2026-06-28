@@ -4,6 +4,11 @@
   scaleStylesheet.href = 'assets/css/desktop-scale.css';
   document.head.appendChild(scaleStylesheet);
 
+  const navigationPatch = document.createElement('script');
+  navigationPatch.src = 'assets/js/site-nav-patch.js';
+  navigationPatch.defer = true;
+  document.head.appendChild(navigationPatch);
+
   const body = document.body;
   const enterButton = document.querySelector('.entry-lion');
   const track = document.querySelector('.carousel-track');
