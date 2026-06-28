@@ -1,78 +1,100 @@
-/* Desktop presentation scale: approximately 20% smaller without using browser zoom. */
+/* Desktop refinement: keep the carousel and cards full-size; reduce the content inside them. */
 @media (min-width: 1051px) {
-  .site-header {
-    gap: 14px;
-    padding: 10px clamp(14px, 3.2vw, 42px);
-  }
-
-  .brand-mark {
-    gap: 10px;
-    font-size: .74rem;
-  }
-
-  .brand-mark img {
-    width: 30px;
-    height: 30px;
-  }
-
-  .top-nav {
-    gap: clamp(8px, 1.6vw, 18px);
-    font-size: .58rem;
-  }
-
-  .top-nav a {
-    padding: 8px 0;
-  }
-
+  /* Restore the original carousel footprint so card content has enough height. */
   .slider-shell {
-    padding: 61px 0 59px;
+    padding: 76px 0 74px;
   }
 
   .carousel-viewport {
-    width: min(1056px, calc(100vw - 96px));
-    height: min(536px, calc(100vh - 120px));
+    width: min(1320px, calc(100vw - 120px));
+    height: min(670px, calc(100vh - 150px));
   }
 
-  .slide {
-    padding: 5px;
+  /* Reduce headings, body copy, buttons and spacing inside the cards only. */
+  .landing-card,
+  .focus-card,
+  .software-card,
+  .music-card,
+  .studio-card,
+  .about-card,
+  .about-story-card {
+    font-size: 80%;
   }
 
-  h1 {
-    font-size: clamp(2.4rem, 4.16vw, 4.28rem);
+  .landing-card {
+    padding: clamp(22px, 3.35vw, 43px);
   }
 
-  h2 {
-    font-size: clamp(1.72rem, 3.08vw, 3.64rem);
-  }
-
-  h3 {
-    font-size: clamp(1.36rem, 2.4vw, 2.52rem);
-  }
-
-  p {
-    font-size: clamp(.72rem, .86vw, .82rem);
-  }
-
-  .eyebrow {
-    margin-bottom: 10px;
-    font-size: .59rem;
-  }
-
-  .section-title-block h2 {
-    font-size: clamp(1.6rem, 2.76vw, 3.2rem);
+  .landing-card h1 {
+    font-size: clamp(2.45rem, 4.2vw, 4.3rem);
   }
 
   .landing-copy p:not(.eyebrow),
-  .feature-copy p {
-    font-size: clamp(.70rem, .78vw, .78rem);
-    line-height: 1.46;
+  .feature-copy p,
+  .music-copy p,
+  .about-story-copy p,
+  .section-title-block p,
+  .app-card p {
+    font-size: clamp(.72rem, .84vw, .84rem);
+    line-height: 1.48;
+  }
+
+  .eyebrow {
+    margin-bottom: 9px;
+    font-size: .62rem;
+  }
+
+  .section-title-block {
+    margin-bottom: 14px;
+  }
+
+  .section-title-block h2 {
+    font-size: clamp(1.85rem, 3.1vw, 3.55rem);
+  }
+
+  .focus-card,
+  .software-card,
+  .music-card,
+  .studio-card,
+  .about-card {
+    padding: clamp(18px, 2.85vw, 34px);
+  }
+
+  .two-panel-grid {
+    gap: clamp(14px, 2.2vw, 24px);
+  }
+
+  .feature-media {
+    min-height: 165px;
   }
 
   .feature-copy {
-    padding: clamp(14px, 1.92vw, 21px);
+    padding: clamp(14px, 1.8vw, 20px);
   }
 
-  .app-grid {
+  .feature-copy p {
+    margin-top: 10px;
+  }
+
+  .question-line {
+    font-size: 1rem;
+  }
+
+  .software-symbols {
+    padding: 18px;
+  }
+
+  .software-symbols img:first-child {
+    width: min(220px, 68%);
+  }
+
+  .software-symbols img:last-child {
+    width: min(270px, 78%);
+    margin-top: 6px;
+  }
+
+  .app-grid,
+  .archive-grid {
     gap: 14px;
   }
 
@@ -81,62 +103,47 @@
   }
 
   .app-card h3 {
-    margin-top: 11px;
-    font-size: 1.24rem;
+    margin-top: 10px;
+    font-size: 1.28rem;
   }
 
   .app-card p {
-    margin: 8px 0 14px;
+    margin: 8px 0 13px;
   }
 
   .app-media {
-    height: 168px;
-    min-height: 168px;
+    height: 165px;
+    min-height: 165px;
     border-radius: 14px;
   }
 
   .button-row {
     gap: 8px;
-    margin-top: 14px;
+    margin-top: 12px;
   }
 
   .action {
     min-height: 34px;
     padding: 8px 12px;
-    font-size: .54rem;
+    font-size: .56rem;
   }
 
-  .carousel-arrow {
-    width: 46px;
-    height: 46px;
-    font-size: 2rem;
+  .focus-line {
+    margin-top: 10px;
+    padding: 9px 12px;
   }
 
-  .carousel-status {
-    bottom: 16px;
+  .landing-art {
+    min-height: 350px;
   }
 
-  .slide-name,
-  .footer-links a {
-    font-size: .58rem;
+  .landing-art .crest {
+    width: min(270px, 65%);
+    margin-bottom: 62px;
   }
 
-  .footer-inner {
-    width: min(944px, calc(100% - 28px));
-    gap: 14px;
-    padding: 18px 0;
-  }
-
-  .footer-logo {
-    width: 40px;
-    height: 40px;
-  }
-
-  .footer-brand {
-    font-size: .84rem;
-  }
-
-  .footer-small {
-    font-size: .74rem;
+  .about-story-copy h2,
+  .music-copy h2 {
+    font-size: clamp(2rem, 3.4vw, 3.8rem);
   }
 }
