@@ -29,17 +29,33 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "CINAEDVS Studios",
-    "url": "https://cinaedvsstudios.github.io/cinaedvs/",
-    "logo": "https://cinaedvsstudios.github.io/cinaedvs/assets/img/cinaedvs/cinaedvs-lion-round.png",
-    "email": "cinaedvsstudios@gmail.com",
-    "sameAs": [
-      "https://www.instagram.com/cinaedvsstudios/",
-      "https://www.instagram.com/forever.bound.series/",
-      "https://www.instagram.com/misschristinadior"
-    ],
-    "description": "CINAEDVS Studios is a multimedia studio for Forever Bound, Organon software projects, Christina Dior music, digital art, bespoke fashion, 3D assets, video and creative production."
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://cinaedvsstudios.github.io/cinaedvs/#website",
+        "url": "https://cinaedvsstudios.github.io/cinaedvs/",
+        "name": "CINAEDVS Studios",
+        "description": "CINAEDVS Studios is a multimedia studio for Forever Bound, Organon software projects, Christina Dior music, digital art, bespoke fashion, 3D assets, video and creative production.",
+        "publisher": {
+          "@id": "https://cinaedvsstudios.github.io/cinaedvs/#organization"
+        },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://cinaedvsstudios.github.io/cinaedvs/#organization",
+        "name": "CINAEDVS Studios",
+        "url": "https://cinaedvsstudios.github.io/cinaedvs/",
+        "logo": "https://cinaedvsstudios.github.io/cinaedvs/assets/img/cinaedvs/cinaedvs-lion-round.png",
+        "email": "cinaedvsstudios@gmail.com",
+        "sameAs": [
+          "https://www.instagram.com/cinaedvsstudios/",
+          "https://www.instagram.com/forever.bound.series/",
+          "https://www.instagram.com/misschristinadior"
+        ],
+        "description": "CINAEDVS Studios is a multimedia studio for Forever Bound, Organon software projects, Christina Dior music, digital art, bespoke fashion, 3D assets, video and creative production."
+      }
+    ]
   }
   </script>
 </head>
